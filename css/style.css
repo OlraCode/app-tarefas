@@ -27,7 +27,8 @@ body{
 main{
     background-color: #fff;
     width: 100%;
-    height: 600px;
+    height: min-content;
+    max-height: 600px;
     border-radius: 18px;
     padding: 1rem;
 }
@@ -55,4 +56,44 @@ form .material-symbols-outlined{
     border: none;
     padding: 7px 25px;
     border-radius: 50px;
+}
+.task-list{
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+.task-list ul li{
+    list-style: none;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.task-list ul li::before{
+    content: '';
+    position: absolute;
+    left: 35px;
+    background-image: url(../img/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+}
+.task-list ul li.check .task{
+    text-decoration: line-through;
+    font-style: italic;
+}
+.task-list ul li.check::before{
+    content: '';
+    position: absolute;
+    left: 35px;
+    background-image: url(../img/checked.png);
+    background-position: center;
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+}
+.task-list ul li span.material-symbols-outlined{
+    text-decoration: none;
+    font-size: 25px;
 }
