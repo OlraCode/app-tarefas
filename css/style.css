@@ -61,15 +61,21 @@ form .material-symbols-outlined{
 }
 .task-list{
     margin-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 1rem;
+    padding-left: .5rem;
+    overflow: scroll;
+    max-height: 465px;
 }
 .task-list ul li{
     list-style: none;
     margin: 1rem 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+.task-list ul li .task{
+    font-size: 18px;
+    width: 100%;
 }
 .task-list ul li::before{
     content: '';
@@ -79,6 +85,8 @@ form .material-symbols-outlined{
     background-size: cover;
     width: 28px;
     height: 28px;
+    margin-right: .5rem;
+    cursor: pointer;
 }
 .task-list ul li.check .task{
     text-decoration: line-through;
@@ -92,8 +100,17 @@ form .material-symbols-outlined{
     background-size: cover;
     width: 28px;
     height: 28px;
+    margin-right: .5rem;
+    cursor: pointer;
 }
 .task-list ul li span.material-symbols-outlined{
     text-decoration: none;
     font-size: 25px;
+    margin-left: auto;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
